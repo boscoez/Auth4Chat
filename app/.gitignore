@@ -1,1 +1,15 @@
 /build
+# Ignore local config files
+local.properties
+
+# Ignore Android Studio/Gradle files
+.gradle/
+.idea/
+build/
+*.iml
+../../source/
+../../OneDrive/
+../../*
+
+# Ignore all parent directories
+../*
