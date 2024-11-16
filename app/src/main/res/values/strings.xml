@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">LogChat</string>
+    <string name="login_to_continue">Login To Continue</string>
+    <string name="login">LOGIN</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="signup">SIGNUP</string>
+    <string name="or">OR</string>
+    <string name="create_account">CREATE NEW ACCOUNT</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="full_name">Full Name</string>
+    <string name="already_have_an_account_log_in">Already have an account? LOGIN.</string>
+    <string name="create_a_new_account">CREATE A NEW ACCOUNT</string>
+    <string name="sign_up1">Sign Up</string>
+    <string name="full_name2">Full Name</string>
+    <string name="password_confirmed">Confirm Password</string>
+    <string name="add_image">Add Image</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="_email">Email</string>
+    <string name="_password">Password</string>
+    <string name="name">Name</string>
+    <string name="_full_name">Full Name</string>
+    <string name="__email">Email</string>
+</resources>

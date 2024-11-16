@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "713844285723",
+    "project_id": "logchatin-6197b",
+    "storage_bucket": "logchatin-6197b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713844285723:android:07c0567e7473cbaa6f33be",
+        "android_client_info": {
+          "package_name": "com.example.logchat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPtzGMQe7pK-6QcvxVybFEG0roG1BNwOE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
