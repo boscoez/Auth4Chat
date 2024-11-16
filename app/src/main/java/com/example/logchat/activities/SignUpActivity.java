@@ -32,6 +32,11 @@ public class SignUpActivity extends AppCompatActivity {
     private PreferenceManager preferenceManager;
     private String encodeImage;
 
+    /**
+     * @param savedInstanceState If the activity is being re-initialized after
+     *                           previously being shut down then this Bundle contains the data it most
+     *                           recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,6 +94,10 @@ public class SignUpActivity extends AppCompatActivity {
                     showToast(exception.getMessage());
         });
     }
+
+    /**
+     * @param bitmap encode JPEG
+     */
     private String encodeImage(Bitmap bitmap){
         int previewWidth = 150;
         int previewHeight = bitmap.getHeight()*previewWidth / bitmap.getWidth();
@@ -117,6 +126,9 @@ public class SignUpActivity extends AppCompatActivity {
                 }
             });
 
+    /**
+     * @return Boolean to validate signup details
+     */
     private Boolean isValidateSignUpDetails(){
         if(encodeImage == null){
             showToast("Please Select Your Image");
@@ -148,6 +160,9 @@ public class SignUpActivity extends AppCompatActivity {
             return true;
     }}
 
+    /**
+     * @param isLoading
+     */
     private void loading(Boolean isLoading) {
         if (isLoading) {
             binding.buttonSignUp.setVisibility(View.INVISIBLE);

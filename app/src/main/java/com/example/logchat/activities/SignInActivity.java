@@ -18,6 +18,11 @@ public class SignInActivity extends AppCompatActivity {
     private ActivitySignInBinding binding;
     private PreferenceManager preferenceManager;
 
+    /**
+     * @param savedInstanceState If the activity is being re-initialized after
+     *                           previously being shut down then this Bundle contains the data it most
+     *                           recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +46,10 @@ public class SignInActivity extends AppCompatActivity {
     private void showToast(String message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
+
+    /**
+     *  SignIn function
+     */
     private void SignIn() {
         loading(true);
         FirebaseFirestore database = FirebaseFirestore.getInstance();
@@ -68,6 +77,10 @@ public class SignInActivity extends AppCompatActivity {
                     }
                 });
         }
+
+    /**
+     * @param isLoading
+     */
     private void loading (Boolean isLoading){
         if (isLoading) {
             binding.buttonSignIn.setVisibility(View.INVISIBLE);
@@ -77,6 +90,10 @@ public class SignInActivity extends AppCompatActivity {
             binding.buttonSignIn.setVisibility(View.VISIBLE);
         }
     }
+
+    /**
+     * @return Boolean to validate signup details
+     */
     private boolean isValidateSignUpDetails() {
         if (binding.inputEmail.getText().toString().trim().isEmpty()) {
             showToast("Please Enter Your Email");

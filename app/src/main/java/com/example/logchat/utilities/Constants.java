@@ -1,5 +1,8 @@
 package com.example.logchat.utilities;
 
+/**
+ * Initialize constants
+ */
 public class Constants {
     public static final String KEY_COLLECTION_USERS = "User";
     public static final String KEY_NAME = "name";
