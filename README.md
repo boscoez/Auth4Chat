@@ -60,6 +60,5 @@
 ### **Highlights**
 - **Gallery Section:** Images are organized in a professional grid with consistent sizes for a polished look.
 - **Database Entries Section:** Backend database images are clearly presented and appropriately sized for easy readability.
-- **Accessibility:** Meaningful `alt` text has been added to all images for improved accessibility.
 
 ---
