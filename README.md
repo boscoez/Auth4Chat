@@ -9,7 +9,7 @@
 
 ### **Updated User Entries**
 
-| ![Updated Entry 1](https://raw.githubusercontent.com/your-repo-path/Benzdbentry.JPG) | ![Updated Entry 2](https://raw.githubusercontent.com/your-repo-path/Benzdbentry2.JPG) |
+| ![Updated Entry 1](https://raw.githubusercontent.com/boscoez/Auth4Chat/Benzdbentry.JPG) | ![Updated Entry 2](https://raw.githubusercontent.com/boscoez/Auth4Chat/Benzdbentry2.JPG) |
 |-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
 
 ---
@@ -17,8 +17,8 @@
 ### **Highlights**
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/your-repo-path/Benzdbentry.JPG" alt="Highlighted Entry 1" width="800">
+  <img src="https://raw.githubusercontent.com/boscoez/Auth4Chat/Benzdbentry.JPG" alt="Highlighted Entry 1" width="800">
   <br>
-  <img src="https://raw.githubusercontent.com/your-repo-path/Benzdbentry2.JPG" alt="Highlighted Entry 2" width="800">
+  <img src="https://raw.githubusercontent.com/boscoez/Auth4Chat/Benzdbentry2.JPG" alt="Highlighted Entry 2" width="800">
 </div>
 
