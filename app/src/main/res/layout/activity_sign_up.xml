@@ -88,7 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
-            android:hint="@string/__email"
+            android:hint="@string/_email"
             android:background="@drawable/background_input"
             android:imeOptions="actionNext"
             android:importantForAutofill="no"
@@ -97,7 +97,6 @@
             android:paddingEnd="16dp"
             android:textColor="@color/primary_text"
             android:textSize="18sp"/>
-
         <EditText
             android:id="@+id/inputPassword"
             android:layout_width="match_parent"

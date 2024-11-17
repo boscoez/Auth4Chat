@@ -107,7 +107,6 @@ public class SignUpActivity extends AppCompatActivity {
                     showToast(exception.getMessage()); // Show error message to the user.
                 });
     }
-
     /**
      * Encodes a given bitmap image into a Base64 string.
      * @param bitmap The Bitmap to be encoded.

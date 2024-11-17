@@ -1,19 +1,60 @@
 # **SignUp SignIn**
 
-## **Gallery**
+---
 
-| ![image 1](https://github.com/user-attachments/assets/eeceb1fb-ec29-44b3-8547-21d22e62cbcf) | ![image 2](https://github.com/user-attachments/assets/dea7beb5-c08e-402b-b26d-d3519648bf27) | ![image 3](https://github.com/user-attachments/assets/a7991973-e3b9-4c60-99dc-51f4ba5b1812) |
-|------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+<div align="center">
 
-| ![image 4](https://github.com/user-attachments/assets/ae2a143d-34f3-4028-a037-9a2e0fe69632) | ![image 5](https://github.com/user-attachments/assets/3158926a-ee84-4a5e-8dcd-ef9aae9e7d16) | ![image 6](https://github.com/user-attachments/assets/37fda5e8-7e09-4d7f-8d2d-634fcd444996) |
-|------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+## ✨ **Gallery** ✨
+
+</div>
 
 ---
 
-## **Highlights**
+### **User Interface and Features**
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/6bc63b74-8dbc-4f77-bef7-1bb7c7c793e2" alt="Large Image" width="800">
-  <br>
-  <img src="https://github.com/user-attachments/assets/f35bda44-4ef6-4caf-86a6-05467a83afb8" alt="Database Image" width="800">
+  <table>
+    <tr>
+      <td><img src="https://github.com/user-attachments/assets/48b37b99-c581-44e7-82c3-64b8b5819b2d" alt="Image 1" width="200"/></td>
+      <td><img src="https://github.com/user-attachments/assets/34d319d1-3bb7-4a50-bcc0-ee57efef4a3c" alt="Image 2" width="200"/></td>
+      <td><img src="https://github.com/user-attachments/assets/7969aff0-771c-400e-afa8-aee93243a5be" alt="Image 3" width="200"/></td>
+    </tr>
+    <tr>
+      <td><img src="https://github.com/user-attachments/assets/1e256bd5-4c16-48d1-80fe-7b2a5706eb19" alt="Image 4" width="200"/></td>
+      <td><img src="https://github.com/user-attachments/assets/b6770155-0f2e-497d-812b-2484ecba6b2f" alt="Picture 1" width="200"/></td>
+      <td><img src="https://github.com/user-attachments/assets/12914b85-f905-423f-b194-dcde0501ac3d" alt="Picture 2" width="200"/></td>
+    </tr>
+    <tr>
+      <td><img src="https://github.com/user-attachments/assets/7439662e-7c7b-4ff8-bf89-aba4a6e1e44a" alt="Picture 3" width="200"/></td>
+    </tr>
+  </table>
 </div>
+
+---
+
+<div align="center">
+
+## 🗄️ **Database Entries** 🗄️
+
+</div>
+
+---
+
+### **Backend Database Overview**
+
+<div align="center">
+  <table>
+    <tr>
+      <td><img src="https://github.com/user-attachments/assets/84f95bf7-6644-4bfd-ac20-20ffa1280b9b" alt="Image 5" width="400"/></td>
+      <td><img src="https://github.com/user-attachments/assets/1ef0954d-b53e-4bcc-93aa-9097dade2a9c" alt="Image 6" width="400"/></td>
+    </tr>
+    <tr>
+      <td><img src="https://github.com/user-attachments/assets/e4eaba6b-6a05-46db-893b-39a1b9bd8584" alt="Database Entry 1" width="400"/></td>
+      <td><img src="https://github.com/user-attachments/assets/e95da27b-8d5f-49ae-97cf-4b8b562d6ef6" alt="Database Entry 2" width="400"/></td>
+    </tr>
+  </table>
+</div>
+
+---
+
+---
