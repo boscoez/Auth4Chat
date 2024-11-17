@@ -13,7 +13,5 @@
 ## **Highlights**
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/6bc63b74-8dbc-4f77-bef7-1bb7c7c793e2" alt="Large Image" width="800">
-  <br>
-  <img src="https://github.com/user-attachments/assets/f35bda44-4ef6-4caf-86a6-05467a83afb8" alt="Database Image" width="800">
+   <img src="https://github.com/user-attachments/assets/f35bda44-4ef6-4caf-86a6-05467a83afb8" alt="Database Image" width="800">
 </div>
