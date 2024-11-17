@@ -1,3 +1,5 @@
+Here's the updated version:
+
 ---
 
 # **SignUp SignIn**
@@ -11,6 +13,8 @@
 
 ## **DATABASE ENTRIES**
 
+---
+
 <div align="center">
   <img src="https://github.com/user-attachments/assets/1d81fa72-440f-4c86-bdd8-b33bfbc28609" alt="dbDirtae" width="700">
   <br>
@@ -18,3 +22,5 @@
 </div>
 
 ---
+
+Let me know if this works or if there are any further adjustments you'd like!
