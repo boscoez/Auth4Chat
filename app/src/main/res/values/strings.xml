@@ -21,4 +21,6 @@
     <string name="name">Name</string>
     <string name="_full_name">Full Name</string>
     <string name="__email">Email</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
 </resources>
