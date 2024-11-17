@@ -13,5 +13,6 @@
 ## **Highlights**
 
 <div align="center">
-   <img src="https://github.com/user-attachments/assets/f35bda44-4ef6-4caf-86a6-05467a83afb8" alt="Database Image" width="800">
+![bendb1](https://github.com/user-attachments/assets/08378da3-e211-4748-a761-627f0eace3d0)
+![bendb2](https://github.com/user-attachments/assets/8e2e5688-6cc0-43dc-bd9c-ea023e6bc105)
 </div>
