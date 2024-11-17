@@ -56,9 +56,4 @@
 </div>
 
 ---
-
-### **Highlights**
-- **Gallery Section:** Images are organized in a professional grid with consistent sizes for a polished look.
-- **Database Entries Section:** Backend database images are clearly presented and appropriately sized for easy readability.
-
 ---
