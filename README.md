@@ -1,32 +1,7 @@
-## **Firestore User Collection**
+![image](https://github.com/user-attachments/assets/48b37b99-c581-44e7-82c3-64b8b5819b2d)![image](https://github.com/user-attachments/assets/34d319d1-3bb7-4a50-bcc0-ee57efef4a3c)![image](https://github.com/user-attachments/assets/7969aff0-771c-400e-afa8-aee93243a5be)![image](https://github.com/user-attachments/assets/1e256bd5-4c16-48d1-80fe-7b2a5706eb19)
 
-### **App Preview**
+![image](https://github.com/user-attachments/assets/84f95bf7-6644-4bfd-ac20-20ffa1280b9b)![image](https://github.com/user-attachments/assets/1ef0954d-b53e-4bcc-93aa-9097dade2a9c)
 
-<div align="center">
-  <img src="./assets/image.png" alt="App Preview" width="400">
-  <p>Sign Up Successful UI</p>
-</div>
 
----
 
-### **Database Overview**
 
-| ![Image 1](https://github.com/user-attachments/assets/eeceb1fb-ec29-44b3-8547-21d22e62cbcf) | ![Image 2](https://github.com/user-attachments/assets/dea7beb5-c08e-402b-b26d-d3519648bf27) | ![Image 3](https://github.com/user-attachments/assets/a7991973-e3b9-4c60-99dc-51f4ba5b1812) |
-|------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-
----
-
-### **Updated User Entries**
-
-| ![Updated Entry 1](./assets/Benzdbentry.JPG) | ![Updated Entry 2](./assets/Benzdbentry2.JPG) |
-|---------------------------------------------|---------------------------------------------|
-
----
-
-### **Highlights**
-
-<div align="center">
-  <img src="./assets/Benzdbentry.JPG" alt="Highlighted Database Entry 1" width="800">
-  <br>
-  <img src="./assets/Benzdbentry2.JPG" alt="Highlighted Database Entry 2" width="800">
-</div>
