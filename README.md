@@ -10,7 +10,7 @@
 ## **DATABASE ENTRIES**
 ---
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/08378da3-e211-4748-a761-627f0eace3d0" alt="bendb1" width="600">
+ <img src="https://github.com/user-attachments/assets/023de1b7-b270-4d39-9d50-f985dc2afb73" alt="dbDirtae1" width="700">
   <br>
-  <img src="https://github.com/user-attachments/assets/8e2e5688-6cc0-43dc-bd9c-ea023e6bc105" alt="bendb2" width="600">
+  <img src="https://github.com/user-attachments/assets/1d81fa72-440f-4c86-bdd8-b33bfbc28609" alt="dbDirtae" width="700">
 </div>
