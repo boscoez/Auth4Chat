@@ -1,4 +1,3 @@
-Here's the updated version:
 
 ---
 
@@ -21,5 +20,3 @@ Here's the updated version:
 </div>
 
 ---
-
-Let me know if this works or if there are any further adjustments you'd like!
