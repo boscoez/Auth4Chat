@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LogChat</string>
+    <string name="app_name">CWU Chats</string>
     <string name="login_to_continue">Login To Continue</string>
     <string name="login">LOGIN</string>
     <string name="password">Password</string>
@@ -23,4 +23,7 @@
     <string name="__email">Email</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
+    <string name="chat">Chats</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="select_user">Select User</string>
 </resources>
