@@ -29,23 +29,24 @@ import java.util.List;
 
 /**
  * Main activity of the LogChat application.
- * This activity serves as the entry point of the application, handling UI setup and
- * implementing an immersive edge-to-edge layout for modern user interfaces.
+ * Handles user interface initialization, user authentication, and real-time
+ * updates for recent conversations using Firestore.
  */
 public class MainActivity extends AppCompatActivity {
-    private ActivityMainBinding binding;
-    private PreferenceManager preferenceManager;
-    private List<ChatMessage> conversations;
-    //private RecentConversationsAdapter conversationsAdapter;
-    private FirebaseFirestore database;
+    private ActivityMainBinding binding; // View Binding for MainActivity layout
+    private PreferenceManager preferenceManager; // Shared preferences for managing user data
+    private List<ChatMessage> conversations; // List to hold recent conversations
+    // private RecentConversationsAdapter conversationsAdapter; // Adapter for RecyclerView (commented out)
+    private FirebaseFirestore database; // Firestore database instance for data storage and retrieval
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        binding = ActivityMainBinding.inflate(getLayoutInflater()); // Inflate layout with binding
+        setContentView(binding.getRoot()); // Set content view
 
         try {
+            // Initialize Firestore database
             database = FirebaseFirestore.getInstance();
             if (database == null) {
                 Log.e("MainActivity", "Firestore is null.");
@@ -56,70 +57,72 @@ public class MainActivity extends AppCompatActivity {
             Log.e("MainActivity", "Error initializing Firestore: " + e.getMessage());
         }
 
-        preferenceManager = new PreferenceManager(getApplicationContext());
-        //init();
-        loadUserDetails();
-        getToken();
-        setListeners();
-        listenConversations();
+        preferenceManager = new PreferenceManager(getApplicationContext()); // Initialize preference manager
+        // init(); // Initialize conversations (commented out)
+        loadUserDetails(); // Load user details to display in the UI
+        getToken(); // Get FCM token for push notifications
+        setListeners(); // Set up event listeners for UI interactions
+        listenConversations(); // Listen for real-time updates on recent conversations
     }
 
-//    private void init() {
-//        conversations = new ArrayList<>();
-//        conversationsAdapter = new RecentConversationsAdapter(conversations);
-//        binding.conversationRecyclerView.setAdapter(conversationsAdapter);
-//    }
-
+    // Set up event listeners for user interactions
     private void setListeners() {
-        binding.imageSignOut.setOnClickListener(v -> signOut());
+        binding.imageSignOut.setOnClickListener(v -> signOut()); // Sign out when the sign-out button is clicked
         binding.fabNewChat.setOnClickListener(v ->
-                startActivity(new Intent(getApplicationContext(), userActivity.class)));
+                startActivity(new Intent(getApplicationContext(), userActivity.class))); // Start a new chat
     }
 
+    // Load user details (name and profile picture) from shared preferences
     private void loadUserDetails() {
         String name = preferenceManager.getString(Constants.KEY_NAME);
         String image = preferenceManager.getString(Constants.KEY_IMAGE);
 
         if (name != null) {
-            binding.textName.setText(name);
+            binding.textName.setText(name); // Display user name
         }
 
         if (image != null) {
-            byte[] bytes = Base64.decode(image, Base64.DEFAULT);
+            byte[] bytes = Base64.decode(image, Base64.DEFAULT); // Decode profile image
             Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-            binding.imageProfile.setImageBitmap(bitmap);
+            binding.imageProfile.setImageBitmap(bitmap); // Set profile image in the UI
         }
     }
 
+    // Get FCM token for push notifications
     private void getToken() {
-        FirebaseMessaging.getInstance().getToken().addOnSuccessListener(this::updateToken);
+        FirebaseMessaging.getInstance().getToken().addOnSuccessListener(this::updateToken); // Fetch and update token
     }
 
+    // Update the FCM token in Firestore
     private void updateToken(String token) {
         String userId = preferenceManager.getString(Constants.KEY_USER_ID);
         if (userId == null) {
-            showToast("User ID is null, unable to update token");
+            showToast("User ID is null, unable to update token"); // Show error if user ID is missing
             return;
         }
 
+        // Update the token in Firestore
         DocumentReference documentReference = database.collection(Constants.KEY_COLLECTION_USERS)
                 .document(userId);
         documentReference.update(Constants.KEY_FCM_TOKEN, token)
-                .addOnSuccessListener(unused -> showToast("Token Updated Successfully"))
-                .addOnFailureListener(e -> showToast("Unable To Update Token"));
+                .addOnSuccessListener(unused -> showToast("Token Updated Successfully")) // Success message
+                .addOnFailureListener(e -> showToast("Unable To Update Token")); // Failure message
     }
 
+    // Listen for real-time updates to recent conversations
     private void listenConversations() {
         if (database == null) {
             Log.e("MainActivity", "Firestore database is null. Skipping conversation listener setup.");
             return;
         }
 
-        database.collection(Constants.KEY_CONVERSATIONS)
+        // Query Firestore for conversations where the user is the sender
+        database.collection(Constants.KEY_COLLECTION_CONVERSATIONS)
                 .whereEqualTo(Constants.KEY_SENDER_ID, preferenceManager.getString(Constants.KEY_USER_ID))
                 .addSnapshotListener(eventListener);
     }
 
+    // Firestore event listener for conversation updates
     private final EventListener<QuerySnapshot> eventListener = (value, error) -> {
         if (error != null) {
             Log.e("MainActivity", "Error in snapshot listener: " + error.getMessage());
@@ -128,22 +131,25 @@ public class MainActivity extends AppCompatActivity {
         if (value != null) {
             for (DocumentChange documentChange : value.getDocumentChanges()) {
                 if (documentChange.getType() == DocumentChange.Type.ADDED) {
+                    // Map Firestore document fields to ChatMessage object
                     String senderId = documentChange.getDocument().getString(Constants.KEY_SENDER_ID);
                     String receiverId = documentChange.getDocument().getString(Constants.KEY_RECEIVER_ID);
 
                     ChatMessage chatMessage = new ChatMessage();
                     ChatMessage.senderId = senderId;
                     chatMessage.receiverId = receiverId;
-                    chatMessage.message = documentChange.getDocument().getString(Constants.KEY_LAST_MESSAGE);
-                    chatMessage.dateObject = documentChange.getDocument().getDate(Constants.KEY_TIMESTAMP);
-                    conversations.add(chatMessage);
+                    chatMessage.message = documentChange.getDocument().getString(Constants.KEY_LAST_MESSAGE); // Last message
+                    chatMessage.dateObject = documentChange.getDocument().getDate(Constants.KEY_TIMESTAMP); // Timestamp
+                    conversations.add(chatMessage); // Add to conversations list
                 }
             }
-            //conversationsAdapter.notifyDataSetChanged();
-            binding.conversationRecyclerView.smoothScrollToPosition(0);
+            // Update RecyclerView to display conversations
+            // conversationsAdapter.notifyDataSetChanged(); // Uncomment if using an adapter
+            binding.conversationRecyclerView.smoothScrollToPosition(0); // Scroll to the top
         }
     };
 
+    // Sign out the user and clear their session
     private void signOut() {
         String userId = preferenceManager.getString(Constants.KEY_USER_ID);
 
@@ -152,19 +158,21 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        // Remove FCM token and update Firestore
         DocumentReference documentReference = database.collection(Constants.KEY_COLLECTION_USERS)
                 .document(userId);
         HashMap<String, Object> updates = new HashMap<>();
-        updates.put(Constants.KEY_FCM_TOKEN, FieldValue.delete());
+        updates.put(Constants.KEY_FCM_TOKEN, FieldValue.delete()); // Remove token
         documentReference.update(updates)
                 .addOnSuccessListener(unused -> {
-                    preferenceManager.clear();
-                    startActivity(new Intent(getApplicationContext(), SignInActivity.class));
-                    finish();
+                    preferenceManager.clear(); // Clear shared preferences
+                    startActivity(new Intent(getApplicationContext(), SignInActivity.class)); // Navigate to sign-in screen
+                    finish(); // Close the current activity
                 })
-                .addOnFailureListener(e -> showToast("Unable To Sign Out"));
+                .addOnFailureListener(e -> showToast("Unable To Sign Out")); // Show error message
     }
 
+    // Display a Toast message
     private void showToast(String message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
     }
